@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx:stable
+    container_name: practica6_nginx
+    ports:
+      - "8080:80"          # Acceso desde http://localhost:8080
+    volumes:
+      - ./src:/usr/share/nginx/html:ro
+    restart: unless-stopped
